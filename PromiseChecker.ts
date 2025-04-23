@@ -3,7 +3,7 @@ export default class PromiseChecker<T> {
     constructor(prom: Promise<T>) {
         prom.then(() => {
             this.resolved = true;
-        }).catch(reason => {
+        }).catch((/* reason */) => {
             this.rejected = true;
         })
     }
